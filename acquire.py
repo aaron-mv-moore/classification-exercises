@@ -41,7 +41,7 @@ def get_telco_data():
     if os.path.isfile(filename):
         return pd.read_csv(filename)
     else:
-        db = telco_churn
+        db = 'telco_churn'
         url = env.get_db_url(db)
         query = '''SELECT *
             FROM customers c
